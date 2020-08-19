@@ -1,0 +1,29 @@
+{
+  "name": "makeupapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "webpack-dev-server --mode development --open --hot",
+    "build:dev": "webpack --mode production",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^4.3.0"
+  }
+}
