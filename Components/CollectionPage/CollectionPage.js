@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import ProductDisplay from "../ProductDisplay/ProductDisplay.js"
 import DropdownMenu from "./DropdownMenu/DropdownMenu.js"
 import { AutoComplete } from 'antd';
-
+import { Cascader } from 'antd';
 import 'antd/dist/antd.css'
+
+import products from "./products.json"
 
 var request = new XMLHttpRequest()
 const fetch = require("node-fetch");
@@ -17,14 +19,19 @@ class CollectionPage extends React.Component {
         this.dropdownHandler = this.dropdownHandler.bind(this);
         this.getLink = this.getLink.bind(this)
         this.fetchAPI = this.fetchAPI.bind(this)
+
         this.changeType = this.changeType.bind(this)
+        this.onSelectType = this.onSelectType.bind(this)
+        this.blurType = this.blurType.bind(this)
+
         this.getProducts = this.getProducts.bind(this)
 
         this.state={
           products:[],
           sortMode: 0,
           searchTerm:"",
-          type:"Lip Liner"
+          type:null,
+          typeSearch:""
         }
 
 
@@ -95,13 +102,44 @@ class CollectionPage extends React.Component {
       })
     }
 
+    onSelectType(value,option) {
+
+      this.changeType(value)
+      this.setState({type: option});
+      
+    }
+
     changeType(value) {
-      this.setState({type: value});
+      
+            this.setState({typeSearch: value});
+            
+      }
+
+    blurType(){
+
+      let isProduct = false;
+
+      products.forEach((prod) => {
+        console.log(prod.value+" "+this.state.typeSearch)
+
+        if(prod.value == this.state.typeSearch){
+          isProduct =true;
+
+        }
+        
+      })
+
+      if(!isProduct){
+      this.changeType("") 
+      }
       
     }
 
     getProducts(){
-      this.fetchAPI(this.getLink(this.state.type.replace(' ', '_'), null, null))
+      if (this.state.type==null){
+        return;
+      }
+      this.fetchAPI(this.getLink(this.state.type.value.replace(' ', '_'), null, null))
     }
 
 
@@ -115,12 +153,16 @@ class CollectionPage extends React.Component {
       width: 200,
     }}
     options={products}
-    placeholder="try to type `b`"
+    placeholder=""
     filterOption={(inputValue, product) =>
       product.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
     }
-    value={this.state.type} onChange={this.changeType}
+    value={this.state.typeSearch}
+    onSelect={this.onSelectType} onChange={this.changeType}
+    onBlur={this.blurType}
+    
   />
+  <Cascader options={options} onChange={onChange} placeholder="Please select" />
 
 
 <button onClick={this.getProducts}>go</button>
@@ -133,50 +175,3 @@ class CollectionPage extends React.Component {
   }
   
   export default CollectionPage;
-
-  /*
-              <Autocomplete 
-              options={["lip_liner"]}
-              renderInput={(params) => <TextField label="Combo box" variant="outlined" />}
-              value={this.state.type} onChange={this.changeType}/>  */
-
-
-const products = [
-  {
-    value:"Blush",
-    categories: ["Powder, Cream"]
-  },
-  {
-    value:"Bronzer",
-    categories: ["Powder"],
-  },
-  {
-    value:"Eyebrow",
-    categories: ["Pencil"],
-  },
-  {
-    value:"Eyeliner",
-    categories: ["Liquid","Pencil","Gel","Cream"],
-  },
-  {
-    value:"Eyeshadow",
-    categories: ["Palette","Pencil","Cream"],
-  },
-  {
-    value:"Foundation",
-    categories: ["Concealer", "Liquid", "Contour",
-                  "BB CC", "Cream","Mineral","Powder","Highlighter"],
-  },
-  {
-    value:"Lip Liner",
-    categories: ["Pencil"],
-  },
-  {
-    value:"Lipstick",
-    categories: ["Lipstick, Lip_Gloss, Liquid, Lip_Stain"],
-  },
-  {
-    value:"Mascara",
-    categories: [],
-  }
-]

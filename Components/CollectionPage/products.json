@@ -1,0 +1,40 @@
+[
+  {
+    "value":"Blush",
+    "categories": ["Powder, Cream"]
+  },
+  {
+    "value":"Bronzer",
+    "categories": ["Powder"]
+  },
+
+  {
+    "value":"Eyebrow",
+    "categories": ["Pencil"]
+  },
+  {
+    "value":"Eyeliner",
+    "categories": ["Liquid","Pencil","Gel","Cream"]
+  },
+  {
+    "value":"Eyeshadow",
+    "categories": ["Palette","Pencil","Cream"]
+  },
+  {
+    "value":"Foundation",
+    "categories": ["Concealer", "Liquid", "Contour",
+                  "BB CC", "Cream","Mineral","Powder","Highlighter"]
+  },
+  {
+    "value":"Lip Liner",
+    "categories": ["Pencil"]
+  },
+  {
+    "value":"Lipstick",
+    "categories": ["Lipstick, Lip_Gloss, Liquid, Lip_Stain"]
+  },
+  {
+    "value":"Mascara",
+    "categories": []
+  }
+]
