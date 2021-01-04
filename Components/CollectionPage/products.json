@@ -1,40 +1,111 @@
-[
-  {
-    "value":"Blush",
-    "categories": ["Powder, Cream"]
-  },
-  {
-    "value":"Bronzer",
-    "categories": ["Powder"]
-  },
-
-  {
-    "value":"Eyebrow",
-    "categories": ["Pencil"]
-  },
-  {
-    "value":"Eyeliner",
-    "categories": ["Liquid","Pencil","Gel","Cream"]
-  },
-  {
-    "value":"Eyeshadow",
-    "categories": ["Palette","Pencil","Cream"]
-  },
-  {
-    "value":"Foundation",
-    "categories": ["Concealer", "Liquid", "Contour",
-                  "BB CC", "Cream","Mineral","Powder","Highlighter"]
-  },
-  {
-    "value":"Lip Liner",
-    "categories": ["Pencil"]
-  },
-  {
-    "value":"Lipstick",
-    "categories": ["Lipstick, Lip_Gloss, Liquid, Lip_Stain"]
-  },
-  {
-    "value":"Mascara",
-    "categories": []
-  }
-]
+{
+"products":[
+  
+    {
+      "value":"Blush",
+      "categories": [
+        {"value": "", "label": "All"},
+        {"value": "Powder", "label": "Powder"}, 
+        {"value": "Cream", "label": "Cream"}]
+    },
+    {
+      "value":"Bronzer",
+      "categories": [{"value": "", "label": "All"},{"value": "Powder", "label": "Powder"}]
+    },
+  
+    {
+      "value":"Eyebrow",
+      "categories": [{"value": "", "label": "All"},{"value": "Pencil", "label":"Pencil"}]
+    },
+    {
+      "value":"Eyeliner",
+      "categories": [{"value": "", "label": "All"},{"value": "Liquid", "label":"Liquid"},{"value": "Pencil", "label":"Pencil"},
+        {"value": "Gel", "label":"Gel"},{"value": "Cream", "label": "Cream"}]
+    },
+    {
+      "value":"Eyeshadow",
+      "categories": [{"value": "", "label": "All"},{"value": "Palette", "label":"Palette"},
+        {"value": "Pencil", "label":"Pencil"},{"value": "Cream", "label": "Cream"}]
+    },
+    {
+      "value":"Foundation",
+      "categories": [{"value": "", "label": ""},
+        {"value":"Concealer", "label":"Concealer"}, {"value": "Liquid", "label":"Liquid"}, 
+        {"value":"Contour", "label":"Contour"}, {"value":"BB CC", "label":"BB CC"}
+                    , {"value": "Cream", "label": "Cream"},{"value": "Mineral", "label": "Mineral"},
+                    {"value": "Powder", "label": "Powder"},
+                    {"value": "Highlighter", "label": "Highlighter"}]
+    },
+    {
+      "value":"Lip Liner",
+      "categories": [{"value": "", "label": " "},{"value": "Pencil", "label":"Pencil"}]
+    },
+    {
+      "value":"Lipstick",
+      "categories": [{"value": "", "label": "_"},
+        {"value": "Lipstick", "label":"Lipstick"}, {"value": "Lip Gloss", "label":"Lip Gloss"},
+        {"value": "Liquid", "label":"Liquid"},{"value": "Lip Stain", "label":"Lip Stain"}]
+    },
+    {
+      "value":"Mascara",
+      "categories": []
+    }
+  ],
+  "brands": [{"value":"almay"},
+    {"value":"alva"},
+    {"value":"anna_sui"},
+    {"value":"annabelle"},
+    {"value":"benefit"},
+    {"value":"boosh"},
+    {"value":"burt’s_bees"},
+    {"value":"butter_london"},
+    {"value":"c’est_moi"},
+    {"value":"cargo_cosmetics"},
+    {"value":"china_glaze"},
+    {"value":"clinique"},
+    {"value":"coastal_classic_creation"},
+    {"value":"colourpop"},
+    {"value":"covergirl"},
+    {"value":"dalish"},
+    {"value":"deciem"},
+    {"value":"dior"},
+    {"value":"dr._hauschka"},
+    {"value":"e.l.f."},
+    {"value":"essie"},
+    {"value":"fenty"},
+    {"value":"glossier"},
+    {"value":"green_people"},
+    {"value":"iman"},
+    {"value":"l'oreal"},
+    {"value":"lotus_cosmetics_usa"},
+    {"value":"maia's_mineral_galaxy"},
+    {"value":"marcelle"},
+    {"value":"marienatie"},
+    {"value":"maybelline"},
+    {"value":"milani"},
+    {"value":"mineral_fusion"},
+    {"value":"misa"},
+    {"value":"mistura"},
+    {"value":"moov"},
+    {"value":"nudus"},
+    {"value":"nyx"},
+    {"value":"orly"},
+    {"value":"pacifica"},
+    {"value":"penny_lane_organics"},
+    {"value":"physicians_formula"},
+    {"value":"piggy_paint"},
+    {"value":"pure_anada"},
+    {"value":"rejuva_minerals"},
+    {"value":"revlon"},
+    {"value":"sally_b's_skin_yummies"},
+    {"value":"salon_perfect"},
+    {"value":"sante"},
+    {"value":"sinful_colours"},
+    {"value":"smashbox"},
+    {"value":"stila"},
+    {"value":"suncoat"},
+    {"value":"w3llpeople"},
+    {"value":"wet_n_wild"},
+    {"value":"zorah"},
+    {"value":"zorah_biocosmetiques"}]
+}
