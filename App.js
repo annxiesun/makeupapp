@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import CollectionPage from "./Components/CollectionPage/CollectionPage.js"
 class App extends Component{
    render(){
       return(
          <div>
-            <h1>Hello World</h1>
+            <CollectionPage></CollectionPage>
          </div>
       );
    }
