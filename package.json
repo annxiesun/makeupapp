@@ -24,6 +24,7 @@
     "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "style-loader": "^2.0.0",
     "to-string-loader": "^1.1.6",
     "webpack": "^4.44.1",

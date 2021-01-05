@@ -190,7 +190,8 @@ class CollectionPage extends React.Component {
     if (this.state.type.value == "") {
       return;
     }
-    console.log(this.state.category)
+    console.log("cat: "+this.state.category)
+    console.log("brand: "+this.state.brand)
     this.fetchAPI(this.getLink(
       this.state.type.value.replace(' ', '_'),
       this.state.category.replace(' ', '_'), this.state.brand.replace(' ', '_')))
